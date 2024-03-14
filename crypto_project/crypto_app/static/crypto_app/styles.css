@@ -1,0 +1,225 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+
+.nav-links li {
+    margin-left: 1rem;
+}
+
+.nav-links a {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ddd;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Hero section styles */
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/static/crypto_app/images/crypto_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+/* Encrypt/Decrypt section styles */
+.encrypt-section,
+.decrypt-section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.encrypt-content,
+.decrypt-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.encrypt-content h1,
+.decrypt-content h1 {
+    margin-bottom: 2rem;
+}
+
+.file-input {
+    margin-bottom: 1rem;
+}
+
+.file-input label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Login/Signup section styles */
+.login-section,
+.signup-section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.login-content,
+.signup-content {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.login-content h1,
+.signup-content h1 {
+    margin-bottom: 2rem;
+}
+
+.login-content form,
+.signup-content form {
+    text-align: left;
+}
+
+/* Logout section styles */
+.logout-section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.logout-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.logout-content h1 {
+    margin-bottom: 1rem;
+}
+
+.logout-content p {
+    margin-bottom: 2rem;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .nav-active {
+        display: flex;
+    }
+
+    .burger.active .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .burger.active .line2 {
+        opacity: 0;
+    }
+
+    .burger.active .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}

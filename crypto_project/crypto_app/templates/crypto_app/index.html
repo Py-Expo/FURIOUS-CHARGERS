@@ -1,0 +1,16 @@
+{% extends 'crypto_app/base.html' %}
+
+{% block content %}
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Secure Your Files with Crypto Website</h1>
+            <p>Encrypt and decrypt your files with our powerful encryption technology.</p>
+            {% if user.is_authenticated %}
+                <a href="{% url 'encrypt_file' %}" class="btn">Encrypt File</a>
+                <a href="{% url 'decrypt_file' %}" class="btn">Decrypt File</a>
+            {% else %}
+                <a href="{% url 'signup' %}" class="btn">Get Started</a>
+            {% endif %}
+        </div>
+    </section>
+{% endblock %}

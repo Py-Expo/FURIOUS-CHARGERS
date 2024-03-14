@@ -1,0 +1,17 @@
+{% extends 'crypto_app/base.html' %}
+
+{% block content %}
+    <section class="decrypt-section">
+        <div class="decrypt-content">
+            <h1>Decrypt Your File</h1>
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="file-input">
+                    <label for="file">Select an encrypted file:</label>
+                    <input type="file" name="file" id="file" required>
+                </div>
+                <button type="submit" class="btn">Decrypt</button>
+            </form>
+        </div>
+    </section>
+{% endblock %}
